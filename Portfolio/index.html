@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sadman's Spaceship</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="control.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Simply,Sadman</div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="nav-menu">
+                <a href="#about">About</a>
+                <a href="#edueX">Education and Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        
+    </header>
+    
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Sadman Sakib</h1>
+            <p>Software Developer | Artist | Designer | Coder</p>
+            <div class="social-icons">
+                <a href="https://github.com/SadmanSkb55" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/sadman-sakib-96b694282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.facebook.com/share/1Efz4q2seh/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2175/2175193.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/bruwun_bread?igsh=Mmd2cmszbmE2YWxo" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="short-description">Hi, I'm Sadman Sakib, a passionate software developer, creative designer, and lifelong learner. With a background in Computer Science, 
+            I specialize in building engaging, innovative applications that combine functionality with sleek, modern design. 
+            From web and mobile development to game creation, my aim is to create solutions that solve real-world problems.</p>
+        <p class="long-description">I'm constantly honing my skills in various programming languages, tools, and frameworks, always staying curious and exploring new technologies. 
+            In addition to my technical expertise, I am an avid artist and designer, believing that great user experiences come from the perfect balance of form and function. 
+            When I'm not coding or designing, you can find me exploring new creative ideas, gaming, or contributing to open-source projects. 
+            I'm excited to continue growing in this dynamic field and collaborate on projects that make an impact.</p>
+        <button class="see-more" onclick="toggleAboutText()">See More</button>
+    </section>
+    
+    <!-- Education and Experience Section -->
+    <section id="edueX">
+        <h2>Education and Experience</h2>
+        <div class="education-experience">
+            <h3>Education</h3>
+            <p>Bachelor of Science in Computer Science</p>
+            <p>North South University | 2022 - Present</p>
+            <p>completed Higher Secondary Certificate</p>
+            <p>Birsrestha Munshi Abdur Rouf Public Collage | 2019 - 2022</p>
+        </div>
+
+        <div class="education-experience">
+            <h3>Experience</h3>
+            <p>Sub-Executive Body in Earth Club Of North South University</p>
+            <p>january 2024 - january 2025</p>
+            <p>Team Volunteer in INSB ,Media Team</p>
+            <p>january 2024 - january 2025</p>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>
+            <i class="fas fa-code"></i> HTML,CSS & JavaScript (Responsive Design, Bootstrap)
+        </li>
+        <li>
+            <i class="fab fa-git"></i> Git & GitHub
+        </li>
+        <li>
+            <i class="fas fa-database"></i> SQL & SQLlite Database
+        </li>
+        <li>
+            <i class="fas fa-gamepad"></i> Game Development (Unity, C#, C++, Godot, Gdscript)
+        </li>
+        <li>
+            <i class="fas fa-cogs"></i> Software Development (Java, JavaFX, C++, QT, C#, WinForms,Python)
+        </li>
+        <li>
+            <i class="fab fa-android"></i> App Development (Java, Kotlin, Flutter)
+        </li>
+    </ul>
+</section>
+
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>PyroNotes</h3>
+            <p>A notepad with some awesome features like drawing, Text To Speech, Table, Database, and so on.
+                Way more powerful than traditional notepad, still under development, released will be at mid March.
+            </p>
+            <a href="https://github.com/SadmanSkb55/CPP-and-QT-GUI/tree/main/GUI%20with%20QT/PyroNotes" class="btn btn-primary explore-btn">Explore</a>
+        </div>
+        <div class="project-card">
+            <h3>Spellbound Chef : Magical Mayhem</h3>
+            <p>A 2D fantasy game where a chef gets spellbound, can travel through dimensions, made with Godot.</p>
+            <a href="https://github.com/SadmanSkb55/Spellbound-Chef-Magical-Mayhem" class="btn btn-primary explore-btn">Explore</a>
+        </div>
+        <div class="project-card">
+            <h3>Singularity Neutral</h3>
+            <p>A manga where two heroes fight till the end of the universe.</p>
+            <a href="https://www.webtoons.com/en/canvas/singularity-neutral/neutral-universe-singularity-/viewer?title_no=883129&episode_no=1&fbclid=IwY2xjawIoNWtleHRuA2FlbQIxMAABHZYQsoY7dKqw6E6vm4h9AK-ndMgcStGd4fpuNqFLxLzHho1N3a2iBruYcg_aem_ZoBdVX6sqr0XV5QDpWU3zw" class="btn btn-primary explore-btn">Explore</a>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to drop a message!</p>
+
+    <form id="contact-form" action="your_action_here" method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <p id="form-response" class="response-message"></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Sadman's Portfolio</p>
+</footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+
+        function toggleAboutText() {
+            const longDescription = document.querySelector('.long-description');
+            const seeMoreButton = document.querySelector('.see-more');
+
+            if (longDescription.style.display === 'none' || longDescription.style.display === '') {
+                longDescription.style.display = 'block';
+                setTimeout(() => {
+                    longDescription.style.opacity = '1';
+                    longDescription.style.height = 'auto'; 
+                }, 10); 
+                seeMoreButton.innerHTML = 'See Less'; 
+            } else {
+                longDescription.style.opacity = '0';
+                longDescription.style.height = '0';
+                setTimeout(() => {
+                    longDescription.style.display = 'none';
+                }, 600); 
+                seeMoreButton.innerHTML = 'See More'; 
+            }
+        }
+    </script>
+</body>
+</html>
