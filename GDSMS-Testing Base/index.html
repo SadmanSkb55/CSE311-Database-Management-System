@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game & DVD Store</title>
+    
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+   
 </head>
 <body>
 
@@ -38,7 +39,7 @@
             <li class="dropdown">
                 <a href="#">Account</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="profile.html">Profile</a></li>
                     <li><a href="#">Orders</a></li>
                     <li><a href="#">Logout</a></li>
                 </ul>
@@ -55,9 +56,30 @@
     </nav>
 
     <!-- Floating Live Chat Button -->
-    <div class="live-chat">
-        💬 Chat
+    <!-- Floating Live Chat Button -->
+<div class="live-chat" onclick="toggleChat()">
+    💬 Chat
+</div>
+
+<!-- Chat Popup Window -->
+<div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+        <span>Live Chat</span>
+        <button class="close-chat" onclick="toggleChat()">✖</button>
     </div>
+    <div class="chat-body">
+        <p>Choose a question:</p>
+        <button class="question-btn" onclick="showAnswer(1)">How can I rent a game?</button>
+        <div class="answer" id="answer1">You can rent a game by adding it to your cart and selecting the 'Rent' option at checkout.</div>
+
+        <button class="question-btn" onclick="showAnswer(2)">What payment methods do you accept?</button>
+        <div class="answer" id="answer2">We accept credit/debit cards, PayPal, and cash on delivery in-store.</div>
+
+        <button class="question-btn" onclick="showAnswer(3)">Can I cancel my order?</button>
+        <div class="answer" id="answer3">Yes, you can cancel your order within 24 hours of purchase by going to your profile orders section.</div>
+    </div>
+</div>
+
 
 </body>
 </html>
