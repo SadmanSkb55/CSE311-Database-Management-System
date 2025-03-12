@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cartstyle.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="cart.html" class="active">Cart</a>
+        <a href="wishlist.html">Wishlist</a>
+        <input type="text" placeholder="Search..." class="search-bar">
+    </nav>
+
+    <!-- Cart Section -->
+    <div class="cart-container">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-items">
+            <!-- Items will be dynamically added here -->
+        </div>
+
+        <!-- Cart Total -->
+        <div class="cart-total">
+            <h3>Total: $<span id="total-price">0.00</span></h3>
+            <button id="checkout">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="cartscript.js"></script>
+</body>
+</html>

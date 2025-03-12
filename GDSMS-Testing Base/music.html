@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Store</title>
+    <link rel="stylesheet" href="musicstyle.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🎵 Music Store</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Cart 🛒</a></li>
+            <li><a href="#">Wishlist ❤️</a></li>
+            <li><input type="text" placeholder="Search music..." class="search-bar"></li>
+        </ul>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Explore the World of Music</h1>
+        <p>Find your favorite songs, albums, and artists</p>
+    </section>
+
+    <!-- Music Category Bar -->
+    <div class="category-bar">
+        <button class="category-btn" data-category="all">All</button>
+        <button class="category-btn" data-category="pop">Pop</button>
+        <button class="category-btn" data-category="rock">Rock</button>
+        <button class="category-btn" data-category="jazz">Jazz</button>
+        <button class="category-btn" data-category="hiphop">Hip-Hop</button>
+    </div>
+
+    <!-- Music Cards Section -->
+    <section class="music-container">
+        <div class="music-card" data-category="pop">
+            <img src="music1.jpg" alt="Song Cover">
+            <h3>Song Title</h3>
+            <p>Artist Name</p>
+            <p class="duration">⏱️ 3:45</p>
+            <div class="buttons">
+                <button class="wishlist">❤️ Wishlist</button>
+                <button class="cart">🛒 Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="music-card" data-category="rock">
+            <img src="music2.jpg" alt="Song Cover">
+            <h3>Another Song</h3>
+            <p>Artist Name</p>
+            <p class="duration">⏱️ 4:20</p>
+            <div class="buttons">
+                <button class="wishlist">❤️ Wishlist</button>
+                <button class="cart">🛒 Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- More cards can be added -->
+    </section>
+
+    <script src="musicscript.js"></script>
+</body>
+</html>

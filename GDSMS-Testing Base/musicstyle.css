@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.search-bar {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Banner Section */
+.banner {
+    text-align: center;
+    background: url('banner.jpg') no-repeat center center/cover;
+    padding: 60px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+/* Category Bar */
+.category-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: #f8580d;
+}
+
+.category-btn {
+    background: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.category-btn:hover {
+    background: #ec540d;
+    color: white;
+}
+
+/* Music Container */
+.music-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Music Cards */
+.music-card {
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.music-card:hover {
+    transform: translateY(-5px);
+}
+
+.music-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+}
+
+.music-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.music-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.wishlist, .cart {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.wishlist {
+    background: red;
+    color: white;
+}
+
+.cart {
+    background: green;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .music-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

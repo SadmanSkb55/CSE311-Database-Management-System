@@ -7,6 +7,10 @@
     
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
    
 </head>
 <body>
@@ -28,19 +32,20 @@
             <li class="dropdown">
                 <a href="#">Shop</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">All Products</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Movies & Series</a></li>
+                    <li><a href="#allproducts">DVD Mania</a></li>
+                    <li><a href="game.html">Games & Software</a></li>
+                    <li><a href="movie.html">Movies & Series</a></li>
+                    <li><a href="music.html">Music</a></li>
                 </ul>
             </li>
-            <li><a href="#">Wishlist</a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="#contatct">Contact</a></li>
             <li class="dropdown">
                 <a href="#">Account</a>
                 <ul class="dropdown-menu">
                     <li><a href="profile.html">Profile</a></li>
-                    <li><a href="#">Orders</a></li>
+                    <li><a href="cart.html">Orders</a></li>
                     <li><a href="#">Logout</a></li>
                 </ul>
             </li>
@@ -56,9 +61,36 @@
     </nav>
 
     <!-- Floating Live Chat Button -->
-    <!-- Floating Live Chat Button -->
 <div class="live-chat" onclick="toggleChat()">
     💬 Chat
+</div>
+
+<!-- Menu Button (Leftmost in Navbar) -->
+<div class="menu-btn">&#9776;</div>
+
+<!-- Sidebar Panel -->
+<div class="sidebar">
+    <div class="sidebar-upper">
+        <ul>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Request</a></li>
+        </ul>
+    </div>
+    
+    <div class="sidebar-lower">
+        <ul>
+            <li><a href="#">Online Games</a></li>
+            <li><a href="#">Online Movies</a></li>
+            <li><a href="#">Online Series</a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar-footer">
+        <button class="logout-btn">Log Out</button>
+        <button class="turn-off-btn">Turn Off</button>
+    </div>
 </div>
 
 <!-- Chat Popup Window -->
@@ -67,18 +99,491 @@
         <span>Live Chat</span>
         <button class="close-chat" onclick="toggleChat()">✖</button>
     </div>
+    
     <div class="chat-body">
-        <p>Choose a question:</p>
+        <p>Frequent Questions</p>
         <button class="question-btn" onclick="showAnswer(1)">How can I rent a game?</button>
         <div class="answer" id="answer1">You can rent a game by adding it to your cart and selecting the 'Rent' option at checkout.</div>
 
         <button class="question-btn" onclick="showAnswer(2)">What payment methods do you accept?</button>
-        <div class="answer" id="answer2">We accept credit/debit cards, PayPal, and cash on delivery in-store.</div>
+        <div class="answer" id="answer2">We accept credit/debit cards, PayPal, and cash on delivery.</div>
 
         <button class="question-btn" onclick="showAnswer(3)">Can I cancel my order?</button>
         <div class="answer" id="answer3">Yes, you can cancel your order within 24 hours of purchase by going to your profile orders section.</div>
     </div>
+
+    <!-- 🆕 User Question Form -->
+    <div class="chat-input">
+        <textarea id="userQuestion" placeholder="Type your question..."></textarea>
+        <input type="file" id="screenshotUpload" accept="image/*">
+        <button onclick="sendQuestion()">📩 Send</button>
+    </div>
 </div>
+
+<main>
+    <section class="home">
+    <div class="banner">
+        <div class="banner-container">
+            <div class="banner-card">
+                <img src="https://i.postimg.cc/Y9SMdz0P/John-Wick-3.jpg" alt="banner" class="banner-img">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="genre">
+                            <ion-icon name="film"></ion-icon>
+                            <span>Action/Thriller</span>
+                        </div>
+                        <div class="year">
+                            <ion-icon name="calendar"></ion-icon>
+                            <span>2019</span>
+                        </div>
+                        <div class="duration">
+                            <ion-icon name="time"></ion-icon>
+                            <span>2h 11min</span>
+                        </div>
+                        <div class="quality">4k</div>
+                    </div>
+                    <h2 class="card-title">John Wick: Chapter 3 - Parabellum</h2>
+                </div>
+            </div>
+    
+            <div class="banner-card">
+                <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/DB176BD1488D7E4822256EF1778C124FC17388FC1E7F0F6D89B38AFF5FB001F6/scale?width=1200&aspectRatio=1.78&format=webp" alt="banner" class="banner-img">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="genre">
+                            <ion-icon name="film"></ion-icon>
+                            <span>Action/Sci-Fi</span>
+                        </div>
+                        <div class="year">
+                            <ion-icon name="calendar"></ion-icon>
+                            <span>2019</span>
+                        </div>
+                        <div class="duration">
+                            <ion-icon name="time"></ion-icon>
+                            <span>3h 1min</span>
+                        </div>
+                        <div class="quality">4k</div>
+                    </div>
+                    <h2 class="card-title">Avengers: Endgame</h2>
+                </div>
+            </div>
+            <div class="banner-card">
+                <img src="https://www.gamespace.com/wp-content/uploads/2024/08/Black-Myth-Wukong-title-logo-2048x1152-1.jpg" alt="banner" class="banner-img">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="genre">
+                            <ion-icon name="game-controller"></ion-icon>
+                            <span>Souls</span>
+                        </div>
+                        <div class="year">
+                            <ion-icon name="calendar"></ion-icon>
+                            <span>2024</span>
+                        </div>
+                        <div class="platform">
+                            <ion-icon name="logo-playstation"></ion-icon>
+                            <ion-icon name="logo-xbox"></ion-icon>
+                            <ion-icon name="phone-portrait"></ion-icon>
+                            <span>PC/Console</span>
+                        </div>
+                        <div class="quality">HD</div>
+                    </div>
+                    <h2 class="card-title">Black Myth Wukong</h2>
+                </div>
+            </div>
+            
+            <div class="banner-card">
+                <img src="https://afterstorygaming.com/wp-content/uploads/2020/07/detroit-become-human-1920x1080-connor-kara-markus-2018-playstation-4-13448.jpg" alt="banner" class="banner-img">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="genre">
+                            <ion-icon name="game-controller"></ion-icon>
+                            <span>Adventure/Interactive Drama</span>
+                        </div>
+                        <div class="year">
+                            <ion-icon name="calendar"></ion-icon>
+                            <span>2018</span>
+                        </div>
+                        <div class="platform">
+                            <ion-icon name="logo-playstation"></ion-icon>
+                            <ion-icon name="logo-windows"></ion-icon>
+                            <span>PS4/PC</span>
+                        </div>
+                        <div class="quality">4K</div>
+                    </div>
+                    <h2 class="card-title">Detroit: Become Human</h2>
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+</section> 
+
+
+<section id="allproducts">
+<section class="allproducts">
+
+    <!-- Movies Section -->
+    <div class="products-container">
+        <h2>Movies & Series</h2>
+        <div class="movandsrs scrollable">
+            <!-- Movie Cards Here -->
+            <div class="movie-cards">
+                <div class="product-card">
+                    <img src="img/openheimer.jpg" alt="Oppenheimer">
+                    <h3>Oppenheimer</h3>
+                    <p>Biography, Drama</p>
+                    <div class="rating">⭐ 4.8</div>
+                    <div class="buttons">
+                        <button class="wishlist">❤️ Wishlist</button>
+                        <button class="cart">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="img/shutterisland.jpg" alt="Shutter Island">
+                    <h3>Shutter Island</h3>
+                    <p>Mystery, Thriller</p>
+                    <div class="rating">⭐ 4.6</div>
+                    <div class="buttons">
+                        <button class="wishlist">❤️ Wishlist</button>
+                        <button class="cart">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="img/jw4.jpg" alt="John wick ch 4">
+                    <h3>John Wick 4</h3>
+                    <p>Action, Thriller</p>
+                    <div class="rating">⭐ 4.7</div>
+                    <div class="buttons">
+                        <button class="wishlist">❤️ Wishlist</button>
+                        <button class="cart">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="img/deadpoolwolverine.jpg" alt="deadpool wolverine">
+                    <h3>Deadpool & Wolverine</h3>
+                    <p>Action, Comedy</p>
+                    <div class="rating">⭐ 4.9</div>
+                    <div class="buttons">
+                        <button class="wishlist">❤️ Wishlist</button>
+                        <button class="cart">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="img/tfdm.jpg" alt="Transformers 3">
+                    <h3>Transformers: Dark of the Moon</h3>
+                    <p>Action, Sci-Fi</p>
+                    <div class="rating">⭐ 4.4</div>
+                    <div class="buttons">
+                        <button class="wishlist">❤️ Wishlist</button>
+                        <button class="cart">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="img/dm2.jpg" alt="Despicable me 2">
+                    <h3>Despicable Me 2</h3>
+                    <p>Animation, Comedy</p>
+                    <div class="rating">⭐ 4.3</div>
+                    <div class="buttons">
+                        <button class="wishlist">❤️ Wishlist</button>
+                        <button class="cart">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="img/avg4.jpg" alt="Avengers Endgame">
+                    <h3>Avengers: Endgame</h3>
+                    <p>Action, Sci-Fi</p>
+                    <div class="rating">⭐ 4.8</div>
+                    <div class="buttons">
+                        <button class="wishlist">❤️ Wishlist</button>
+                        <button class="cart">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="img/gfrls.jpg" alt="Grave of the Fireflies">
+                    <h3>Grave of the Fireflies</h3>
+                    <p>Animation, Drama</p>
+                    <div class="rating">⭐ 4.9</div>
+                    <div class="buttons">
+                        <button class="wishlist">❤️ Wishlist</button>
+                        <button class="cart">🛒 Add to Cart</button>
+                    </div>
+                </div>
+                
+
+            <div class="product-card">
+                <img src="img/office.jpg" alt="the office">
+                <h3>The Office (US & UK)</h3>
+                <p>Comedy, Sitcom</p>
+                <div class="rating">⭐ 4.8</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/bb.jpeg" alt="Breaking Bad">
+                <h3>Breaking Bad</h3>
+                <p>Crime, Drama</p>
+                <div class="rating">⭐ 4.9</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/got.jpg" alt="Game of Thrones">
+                <h3>Game of Thrones</h3>
+                <p>Fantasy, Drama</p>
+                <div class="rating">⭐ 4.7</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/sherlock.jpg" alt="Sherlock">
+                <h3>Sherlock (BBC)</h3>
+                <p>Mystery, Crime</p>
+                <div class="rating">⭐ 4.8</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Cartoons & Anime on DVD -->
+            <div class="product-card">
+                <img src="img/tomjerry.jpg" alt="Tom and Jerry">
+                <h3>Tom and Jerry</h3>
+                <p>Animation, Comedy</p>
+                <div class="rating">⭐ 4.9</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/scbd.jpg" alt="Scooby-Doo">
+                <h3>Scooby-Doo</h3>
+                <p>Animation, Mystery</p>
+                <div class="rating">⭐ 4.6</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/dbz.jpg" alt="Dragon ball z">
+                <h3>Dragon Ball Z</h3>
+                <p>Anime, Action</p>
+                <div class="rating">⭐ 4.9</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://i.postimg.cc/KYJmT08V/pokemon.jpg" alt="Movie">
+                <h3>Pokémon</h3>
+                <p>Anime, Adventure</p>
+                <div class="rating">⭐ 4.7</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://i.postimg.cc/nc5mhdM9/doctor-who.jpg" alt="Movie">
+                <h3>Doctor Who</h3>
+                <p>Sci-Fi, Adventure</p>
+                <div class="rating">⭐ 4.7</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://i.postimg.cc/G3g30ctV/star-trek.jpg" alt="Movie">
+                <h3>Star Trek</h3>
+                <p>Sci-Fi, Adventure</p>
+                <div class="rating">⭐ 4.8</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://i.postimg.cc/J4wnLnzd/brooklyn-nine-nine.jpg" alt="Movie">
+                <h3>Brooklyn Nine-Nine</h3>
+                <p>Comedy, Sitcom</p>
+                <div class="rating">⭐ 4.8</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://i.postimg.cc/xjLmnG5V/big-bang-theory.jpg" alt="Movie">
+                <h3>The Big Bang Theory</h3>
+                <p>Comedy, Sitcom</p>
+                <div class="rating">⭐ 4.5</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>            
+      
+
+        </div> 
+        </div>
+        <button class="explore" onclick="window.location.href='movie.html';">Explore More</button>
+    </div>
+
+    <!-- Games Section -->
+    <div class="products-container">
+        <h2>Games</h2>
+        <div class="gameandsoft scrollable">
+            <!-- Game Cards Here -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/BvF6sxYb/gta-v.jpg" alt="Game">
+                <h3>GTA V</h3>
+                <p>Action, Open World</p>
+                <div class="rating">⭐ 4.7</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.postimg.cc/MG8F9xhV/cyberpunk-2077.jpg" alt="Game">
+                <h3>Cyberpunk 2077</h3>
+                <p>RPG, Sci-Fi</p>
+                <div class="rating">⭐ 4.2</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Add 4 more game cards -->
+        </div>
+        <button class="explore">Explore More</button>
+    </div>
+
+    <!-- Music Section -->
+    <div class="products-container">
+        <h2>Music</h2>
+        <div class="music scrollable">
+            <!-- Music Cards Here -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/6qcJpSnZ/eminem.jpg" alt="Music">
+                <h3>Eminem - Lose Yourself</h3>
+                <p>Rap, Hip-Hop</p>
+                <div class="rating">⭐ 4.9</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.postimg.cc/3NnVcJhG/adele.jpg" alt="Music">
+                <h3>Adele - Hello</h3>
+                <p>Pop</p>
+                <div class="rating">⭐ 4.6</div>
+                <div class="buttons">
+                    <button class="wishlist">❤️ Wishlist</button>
+                    <button class="cart">🛒 Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Add 4 more music cards -->
+        </div>
+        <button class="explore">Explore More</button>
+    </div>
+
+</section>
+</section>
+    <!--movies section-->
+    <!--Games Section-->
+
+</main>
+
+
+<!-- Contact Section -->
+<section id="contact">
+<section class="contact-section">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+        <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="input-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="send-button">Send Message</button>
+    </form>
+</section>
+</section>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>We provide the best collection of Movies, Games, and Music. Explore and enjoy!</p>
+        </div>
+        
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@yourwebsite.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Street, City, Country</p>
+        </div>
+
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Group 1 Projects. All Rights Reserved.</p>
+    </div>
+</footer>
+
 
 
 </body>
